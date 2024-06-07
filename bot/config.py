@@ -7,19 +7,19 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config:
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", '6965002718:AAHMvGy52iR_K_cnJamRvf36NjU7SRPyfg8')
 
-    SESSION_NAME = ":memory:"
+    SESSION_NAME = "links_money_converter_bot"
 
-    API_ID = int(os.environ.get("API_ID"))
+    API_ID = int(os.environ.get("API_ID", '25435105'))
 
-    API_HASH = os.environ.get("API_HASH")
+    API_HASH = os.environ.get("API_HASH", '011126265844f2d7cc7dc1a024f6bc78')
 
-    CLIENT_ID = os.environ.get("CLIENT_ID")
+    CLIENT_ID = os.environ.get("CLIENT_ID", '011126265844f2d7cc7dc1a024f6bc78')
 
-    CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+    CLIENT_SECRET = os.environ.get("CLIENT_SECRET", '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')
 
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    BOT_OWNER = int(os.environ.get("BOT_OWNER", '6459102722'))
 
     BOT_START_TIME = time.time()
     
@@ -31,7 +31,7 @@ class Config:
 
     SUPPORT_CHAT_LINK = os.environ.get("SUPPORT_CHAT_LINK")
 
-    AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "")
+    AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "6459102722")
 
     AUTH_USERS = [BOT_OWNER, 754495556] + (
         [int(user.strip()) for user in AUTH_USERS_TEXT.split(",")]
